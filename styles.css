@@ -50,3 +50,53 @@ footer a{color:var(--accent-yellow);text-decoration:none;font-weight:700}
   .hero h1{font-size:1.3rem}
   .container{padding:12px}
 }
+.booking-section {
+  padding: 3rem 1.5rem;
+  background: #f9fafb;
+  text-align: center;
+}
+
+.booking-section h2 {
+  color: #1a1a1a;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.booking-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.booking-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+}
+
+.booking-card h3 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.booking-card p {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.booking-btn {
+  display: inline-block;
+  background-color: #1a73e8;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.booking-btn:hover {
+  background-color: #1558b0;
+}

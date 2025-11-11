@@ -64,15 +64,15 @@ footer a{color:var(--accent-yellow);text-decoration:none;font-weight:700}
 
 .booking-options {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
 
 .booking-card {
-  background: white;
+  background: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
   padding: 1.5rem;
 }
 
@@ -88,15 +88,27 @@ footer a{color:var(--accent-yellow);text-decoration:none;font-weight:700}
 
 .booking-btn {
   display: inline-block;
-  background-color: #1a73e8;
-  color: white;
   padding: 12px 20px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
-  transition: 0.2s ease;
+  transition: 0.25s ease-in-out;
 }
 
-.booking-btn:hover {
+.booking-btn.whatsapp {
+  background-color: #25D366;
+  color: #fff;
+}
+
+.booking-btn.whatsapp:hover {
+  background-color: #1DA851;
+}
+
+.booking-btn.form {
+  background-color: #1a73e8;
+  color: #fff;
+}
+
+.booking-btn.form:hover {
   background-color: #1558b0;
 }

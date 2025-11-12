@@ -5,7 +5,7 @@
   --white: #ffffff;
 }
 
-/* Reset and Base Styles */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +16,7 @@
 body {
   background-color: var(--deep-black);
   color: var(--white);
+  overflow-x: hidden;
 }
 
 /* Header */
@@ -26,22 +27,23 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.6rem;
+  font-weight: 700;
   color: var(--accent-yellow);
 }
 
 .whatsapp-btn {
   background-color: var(--primary-red);
   color: var(--white);
-  padding: 0.6rem 1.2rem;
+  padding: 0.6rem 1.3rem;
   border-radius: 1.5rem;
   text-decoration: none;
-  transition: background 0.3s ease;
+  font-weight: 500;
+  transition: 0.3s ease;
 }
 
 .whatsapp-btn:hover {
@@ -49,29 +51,63 @@ header {
   color: var(--deep-black);
 }
 
-/* Main Layout */
-main {
-  padding: 2rem;
+/* Hero Section */
+.hero {
+  background-color: var(--deep-black);
+  text-align: center;
+  padding: 4rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero h1 {
+  font-size: 2rem;
+  color: var(--accent-yellow);
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+}
+
+.cta-btn {
+  background-color: var(--primary-red);
+  color: var(--white);
+  padding: 0.7rem 1.5rem;
+  border-radius: 1.5rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: var(--accent-yellow);
+  color: var(--deep-black);
+}
+
+/* Services Section */
+.services {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+  padding: 3rem 1rem;
+  flex-wrap: wrap;
   background-color: var(--deep-black);
 }
 
 .card {
-  background-color: rgba(255,255,255,0.05);
-  color: var(--white);
+  background-color: rgba(255, 255, 255, 0.05);
   border-radius: 1.2rem;
   padding: 1.5rem;
   width: 300px;
   text-align: center;
-  transition: transform 0.3s ease, background 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .card:hover {
+  background-color: rgba(255, 255, 255, 0.1);
   transform: translateY(-5px);
-  background-color: rgba(255,255,255,0.1);
 }
 
 .card h2 {
@@ -79,18 +115,37 @@ main {
   margin-bottom: 0.5rem;
 }
 
-.card a {
-  display: inline-block;
-  background-color: var(--primary-red);
-  color: var(--white);
-  padding: 0.6rem 1.2rem;
-  border-radius: 1rem;
-  text-decoration: none;
-  margin-top: 1rem;
-  transition: background 0.3s ease, color 0.3s ease;
+.card p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
 }
 
-.card a:hover {
+/* Booking Section */
+.booking {
+  text-align: center;
+  padding: 3rem 1rem 4rem;
+}
+
+.booking h2 {
+  color: var(--accent-yellow);
+  margin-bottom: 1rem;
+}
+
+.booking p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.5rem;
+}
+
+.form-btn {
+  background-color: var(--primary-red);
+  color: var(--white);
+  padding: 0.8rem 1.6rem;
+  border-radius: 1.5rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.form-btn:hover {
   background-color: var(--accent-yellow);
   color: var(--deep-black);
 }
@@ -98,7 +153,10 @@ main {
 /* Footer */
 footer {
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: var(--deep-black);
-  color: rgba(255,255,255,0.7);
-  border-top: 1px s
+  color: rgba(255, 255, 255, 0.7);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+}
+

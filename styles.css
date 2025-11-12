@@ -8,7 +8,7 @@
   --bg-grey: #F5F5F5;
 }
 
-/* Reset & Base */
+/* Base Reset */
 * {
   margin: 0;
   padding: 0;
@@ -20,19 +20,22 @@ body {
   background-color: var(--bg-light);
   color: var(--text-dark);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
+/* Header */
 header {
   background-color: var(--deep-black);
   color: var(--text-light);
   text-align: center;
   padding: 2rem 1rem;
+  border-bottom: 3px solid var(--accent-yellow);
 }
 
 header h1 {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 2.2rem;
   color: var(--accent-yellow);
+  margin-bottom: 0.5rem;
 }
 
 header p {
@@ -41,11 +44,16 @@ header p {
   opacity: 0.85;
 }
 
+.nav-links {
+  margin-top: 1rem;
+}
+
 .nav-links a {
   color: var(--text-light);
   text-decoration: none;
-  margin: 0 0.75rem;
+  margin: 0 1rem;
   font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
@@ -54,61 +62,69 @@ header p {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, var(--deep-black) 40%, var(--primary-red) 100%);
+  background: linear-gradient(120deg, var(--deep-black) 50%, var(--primary-red) 100%);
   color: var(--text-light);
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 4rem 1rem;
 }
 
 .hero h2 {
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 1rem;
 }
 
 .hero p {
   font-size: 1.1rem;
-  opacity: 0.9;
   margin-bottom: 2rem;
+  opacity: 0.9;
 }
 
-.hero a.button {
+.hero .button {
   background-color: var(--accent-yellow);
   color: var(--deep-black);
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
+  padding: 0.9rem 2rem;
+  border-radius: 10px;
   font-weight: 600;
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
-.hero a.button:hover {
+.hero .button:hover {
   background-color: var(--primary-red);
   color: var(--text-light);
 }
 
 /* Services Section */
 .services {
-  background-color: var(--bg-grey);
   padding: 3rem 2rem;
+  background-color: var(--bg-grey);
   text-align: center;
 }
 
 .services h2 {
-  font-size: 1.75rem;
+  font-size: 1.8rem;
   color: var(--deep-black);
   margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.service-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 .service-card {
+  flex: 1 1 280px;
+  max-width: 320px;
   background-color: var(--bg-light);
   border: 2px solid var(--primary-red);
   border-radius: 12px;
   padding: 1.5rem;
-  margin: 1rem auto;
-  max-width: 320px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .service-card:hover {
@@ -122,8 +138,8 @@ header p {
 }
 
 .service-card p {
-  color: var(--text-dark);
   font-size: 0.95rem;
+  color: var(--text-dark);
 }
 
 /* Contact Section */
@@ -136,13 +152,43 @@ header p {
 
 .contact h2 {
   color: var(--accent-yellow);
+  font-size: 1.8rem;
   margin-bottom: 1.5rem;
 }
 
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contact-card {
+  flex: 1 1 300px;
+  max-width: 350px;
+  background-color: #111;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 2px solid var(--primary-red);
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  border-color: var(--accent-yellow);
+  transform: translateY(-4px);
+}
+
+.contact-card p {
+  margin: 0.5rem 0;
+  color: var(--text-light);
+}
+
 .contact a.button {
+  display: inline-block;
   background-color: var(--primary-red);
   color: var(--text-light);
-  padding: 0.75rem 1.5rem;
+  padding: 0.8rem 1.8rem;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
@@ -160,6 +206,16 @@ footer {
   color: var(--text-light);
   text-align: center;
   padding: 1rem;
-  font-size: 0.85rem;
-  opacity: 0.8;
+  font-size: 0.9rem;
+  opacity: 0.85;
+  border-top: 2px solid var(--primary-red);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .service-container,
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+  }
 }

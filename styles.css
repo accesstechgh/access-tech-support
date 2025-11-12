@@ -192,3 +192,52 @@ footer {
   padding: 1rem 0;
   font-size: 0.9rem;
 }
+:root {
+  --primary-red: #F6042E;
+  --deep-black: #020005;
+  --accent-yellow: #FFAE2E;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-logo {
+  height: 48px;
+  width: auto;
+}
+
+.site-header {
+  background-color: var(--deep-black);
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-footer {
+  background-color: var(--deep-black);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+}
+
+.qr-link {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.qr-icon {
+  height: 64px;
+  width: 64px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.qr-icon:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 8px var(--accent-yellow));
+}

@@ -1,40 +1,106 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AccessTech Support</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="./AccessTech-BrandAssets/favicon.ico" type="image/x-icon">
-</head>
-<body>
-  <header>
-    <img src="./AccessTech-BrandAssets/logo/access-tech-logo-dark.png" alt="AccessTech Logo" class="logo">
-    <h1>AccessTech Support</h1>
-  </header>
+:root {
+  --primary-red: #F6042E;
+  --deep-black: #020005;
+  --accent-yellow: #FFAE2E;
+}
 
-  <main>
-    <section class="hero">
-      <h2>Reliable Tech Help, Anytime.</h2>
-      <p>Your trusted partner for diagnostics, maintenance, and digital solutions.</p>
-      <a href="https://wa.me/233599966149" target="_blank" class="btn-primary">Book Support via WhatsApp</a>
-    </section>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background: linear-gradient(180deg, #020005 0%, #1a0900 40%, #FFAE2E15 100%);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
-    <section class="booking">
-      <h2>Detailed Booking</h2>
-      <p>Tell us your device issue, preferred time, or location. We’ll reach out promptly.</p>
-      <a href="https://wa.me/233599966149" target="_blank" class="btn-secondary">Start Booking</a>
-    </section>
-  </main>
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--deep-black);
+  border-bottom: 1px solid var(--accent-yellow);
+}
 
-  <footer>
-    <div class="footer-content">
-      <img src="./AccessTech-BrandAssets/qr-codes/qr-single.png" alt="AccessTech QR" class="qr">
-      <p>Scan to connect instantly.</p>
-      <p>© 2025 AccessTech Support — All rights reserved.</p>
-    </div>
-  </footer>
+header .logo {
+  height: 50px;
+  position: absolute;
+  left: 1rem;
+}
 
-  <script src="script.js"></script>
-</body>
-</html>
+header h1 {
+  color: var(--accent-yellow);
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.hero h2 {
+  color: var(--accent-yellow);
+  font-size: 2rem;
+}
+
+.hero p {
+  color: #ddd;
+  max-width: 500px;
+  margin: 1rem auto;
+}
+
+.btn-primary, .btn-secondary {
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  transition: 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-red);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-yellow);
+  color: var(--deep-black);
+}
+
+.btn-secondary {
+  border: 1px solid var(--accent-yellow);
+  color: var(--accent-yellow);
+}
+
+.btn-secondary:hover {
+  background-color: var(--accent-yellow);
+  color: var(--deep-black);
+}
+
+.booking {
+  text-align: center;
+  padding: 2rem;
+}
+
+footer {
+  margin-top: auto;
+  background-color: #080808;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-top: 1px solid var(--accent-yellow);
+}
+
+footer .qr {
+  height: 110px;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+}

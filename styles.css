@@ -4,6 +4,7 @@
   --accent-yellow: #FFAE2E;
 }
 
+/* GENERAL */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -14,27 +15,30 @@ body {
   min-height: 100vh;
 }
 
-header {
+/* HEADER */
+.site-header {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1rem;
   background-color: var(--deep-black);
   border-bottom: 1px solid var(--accent-yellow);
+  position: relative;
 }
 
-header .logo {
+.brand-logo {
   height: 50px;
   position: absolute;
   left: 1rem;
 }
 
-header h1 {
+.header-center h1 {
   color: var(--accent-yellow);
   font-weight: 600;
   font-size: 1.6rem;
 }
 
+/* HERO */
 .hero {
   text-align: center;
   padding: 4rem 1rem;
@@ -51,16 +55,19 @@ header h1 {
   margin: 1rem auto;
 }
 
+/* BUTTONS */
 .btn-primary, .btn-secondary {
   text-decoration: none;
   padding: 0.8rem 1.5rem;
   border-radius: 30px;
   transition: 0.3s ease;
+  display: inline-block;
+  margin-top: 1rem;
 }
 
 .btn-primary {
   background-color: var(--primary-red);
-  color: #fff;
+  color: white;
 }
 
 .btn-primary:hover {
@@ -78,46 +85,13 @@ header h1 {
   color: var(--deep-black);
 }
 
+/* BOOKING SECTION */
 .booking {
   text-align: center;
   padding: 2rem;
 }
 
-footer {
-  margin-top: auto;
-  background-color: #080808;
-  text-align: center;
-  padding: 2rem 1rem;
-  border-top: 1px solid var(--accent-yellow);
-}
-
-footer .qr {
-  height: 110px;
-  margin-bottom: 0.5rem;
-}
-
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 1.2rem;
-  }
-  .hero h2 {
-    font-size: 1.5rem;
-  }
-}
-
-
-.brand-logo {
-  height: 50px;
-  margin-right: 1rem;
-  vertical-align: middle;
-}
-
-.header-center h1 {
-  color: var(--accent-yellow);
-  font-family: 'Poppins', sans-serif;
-  text-align: center;
-}
-
+/* FOOTER CONTACT */
 .footer-contact {
   text-align: center;
   margin-top: 2rem;
@@ -129,6 +103,24 @@ footer .qr {
   margin: 10px auto;
   display: block;
   border-radius: 8px;
-  box-shadow: 0 0 8px rgba(246, 4, 46, 0.3);
+  box-shadow: 0 0 12px rgba(246, 4, 46, 0.4);
 }
 
+/* FOOTER */
+footer {
+  margin-top: auto;
+  background-color: #080808;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-top: 1px solid var(--accent-yellow);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .header-center h1 {
+    font-size: 1.2rem;
+  }
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+}

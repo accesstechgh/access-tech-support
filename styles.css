@@ -104,3 +104,31 @@ footer .qr {
     font-size: 1.5rem;
   }
 }
+
+
+.brand-logo {
+  height: 50px;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
+.header-center h1 {
+  color: var(--accent-yellow);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.footer-contact {
+  text-align: center;
+  margin-top: 2rem;
+  color: #d8d8d8;
+}
+
+.footer-qr {
+  width: 130px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(246, 4, 46, 0.3);
+}
+

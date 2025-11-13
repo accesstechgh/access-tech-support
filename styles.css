@@ -2,51 +2,123 @@
   --primary-red: #F6042E;
   --deep-black: #020005;
   --accent-yellow: #FFAE2E;
-  --muted: #666;
-  --container: 1100px;
-  --radius: 8px;
+  --white: #FFFFFF;
+  --muted: #E9E9E9;
+  --max-width: 1100px;
 }
+
+/* base */
 *{box-sizing:border-box}
+html,body{height:100%}
 body{
-  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
   margin:0;
-  color:var(--deep-black);
-  background:#fff;
+  font-family: "Poppins", Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  color:var(--white);
+  background:var(--deep-black);
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
-  line-height:1.45;
 }
-.container{max-width:var(--container);margin:0 auto;padding:20px;}
-.hero{
-  background: linear-gradient(90deg,var(--primary-red),var(--accent-yellow));
-  color:#fff;
-  padding:34px 20px;
+
+/* header */
+.site-header{border-bottom:1px solid rgba(255,255,255,0.04)}
+.header-inner{
+  max-width:var(--max-width);
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding:14px 20px;
+  justify-content:space-between;
+}
+.header-inner .left,
+.header-inner .center,
+.header-inner .right{display:flex;align-items:center}
+.brand-logo{height:48px; width:auto; display:block}
+
+/* center title absolute-like centered but responsive */
+.header-inner .center{
+  flex:1;
+  flex-direction:column;
+  align-items:center;
   text-align:center;
 }
-.hero h1{margin:0;font-size:1.9rem;letter-spacing:0.5px}
-.hero p{margin:8px 0 16px;font-weight:600}
-.cta-btn{
+.site-title{
+  font-weight:700;
+  letter-spacing:1px;
+  color:var(--accent-yellow);
+  font-size:1rem;
+}
+.site-tag{
+  font-size:0.78rem;
+  color:rgba(255,255,255,0.78);
+  margin-top:2px;
+}
+
+/* right CTA */
+.cta{
   display:inline-block;
-  background:var(--deep-black);
-  color:#ffd400;
-  padding:10px 16px;
+  padding:10px 14px;
   border-radius:999px;
   text-decoration:none;
-  font-weight:800;
+  font-weight:700;
+  font-size:0.92rem;
 }
-.services, .pricing, .payment, .contact{padding:22px 0}
-.services h2, .pricing h2, .payment h2, .contact h2{margin:0 0 12px;font-size:1.3rem}
-.services ul{padding-left:18px;color:var(--muted)}
-table{width:100%;border-collapse:collapse;background:#fff;margin-top:12px}
-thead th{background:#f9f9f9;text-align:left;padding:10px;border-bottom:1px solid #eee}
-tbody td{padding:10px;border-bottom:1px solid #f1f1f1}
-.warranty{margin-top:8px;color:var(--muted);font-size:0.95rem}
-footer{background:var(--deep-black);color:#fff;padding:14px 0;margin-top:22px;text-align:center}
-footer a{color:var(--accent-yellow);text-decoration:none;font-weight:700}
+.cta.primary{background:var(--primary-red); color:var(--white)}
+.cta.primary:hover{background:var(--accent-yellow); color:var(--deep-black)}
+.cta.whatsapp{background:transparent; border:2px solid rgba(255,255,255,0.06); color:var(--white)}
+.cta.whatsapp:hover{border-color:var(--accent-yellow); color:var(--accent-yellow)}
 
-/* responsive */
-@media (max-width:720px){
-  .hero{padding:22px 12px}
-  .hero h1{font-size:1.3rem}
-  .container{padding:12px}
+/* hero */
+.hero{padding:48px 20px 28px; text-align:center; background:linear-gradient(150deg, rgba(2,0,5,0.85) 0%, rgba(246,4,46,0.12) 100%)}
+.hero-inner{max-width:var(--max-width); margin:0 auto}
+.hero h1{font-size:2rem; color:var(--accent-yellow); margin-bottom:8px}
+.hero p{color:rgba(255,255,255,0.85); max-width:720px; margin:0 auto 18px}
+
+/* inline cards row */
+.cards{display:flex; gap:20px; justify-content:center; flex-wrap:wrap; padding:28px 20px; max-width:var(--max-width); margin:0 auto}
+.card{
+  background:rgba(255,255,255,0.03);
+  border-radius:12px;
+  padding:18px;
+  width:300px;
+  text-align:center;
+  transition:transform .22s ease, box-shadow .22s ease;
+}
+.card h2{color:var(--primary-red); margin-bottom:8px}
+.card p{color:rgba(255,255,255,0.85); font-size:0.95rem}
+.card:hover{transform:translateY(-6px); box-shadow:0 10px 30px rgba(0,0,0,0.45)}
+
+/* booking CTA area */
+.booking-cta{padding:26px 20px; text-align:center; border-top:1px solid rgba(255,255,255,0.03)}
+.booking-cta h2{color:var(--accent-yellow); margin-bottom:8px}
+.booking-actions{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:12px}
+
+/* footer */
+.site-footer{border-top:1px solid rgba(255,255,255,0.04); padding:18px 16px}
+.footer-inner{max-width:var(--max-width); margin:0 auto; display:flex; gap:16px; align-items:center; justify-content:space-between; flex-wrap:wrap}
+.footer-left p,
+.footer-center p{color:rgba(255,255,255,0.78); margin:0; font-size:0.95rem}
+.footer-right{display:flex; align-items:center; gap:8px}
+.footer-qr{height:84px; width:auto; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.6)}
+
+/* responsive behavior */
+@media (max-width:900px){
+  .header-inner{padding:12px}
+  .brand-logo{height:42px}
+  .hero h1{font-size:1.6rem}
+  .card{width:100%; max-width:560px}
+  .footer-qr{height:72px}
+}
+
+@media (max-width:540px){
+  .header-inner{flex-direction:column; gap:8px; align-items:center}
+  .header-inner .left{order:1}
+  .header-inner .center{order:2}
+  .header-inner .right{order:3}
+  .header-inner .center{align-items:center}
+  .site-title{font-size:0.95rem}
+  .hero{padding:28px 14px}
+  .cta{font-size:0.9rem; padding:10px 12px}
+  .footer-inner{flex-direction:column; gap:12px; text-align:center}
+  .footer-qr{height:64px}
 }

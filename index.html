@@ -1,96 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Access Tech. Support — Lashibi</title>
-  <meta name="description" content="Access Tech. Support — same-day gadget repairs in Lashibi. Book via WhatsApp or our booking form." />
-  <!-- favicon (ensure this path matches your repo) -->
-  <link rel="icon" type="image/x-icon" href="AccessTech-BrandAssets/favicon.ico" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AccessTech Support</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="./AccessTech-BrandAssets/favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <!-- HEADER: logo left, centered company name, action right -->
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="left">
-        <img src="AccessTech-BrandAssets/logo/access-tech-logo-dark.png" alt="Access Tech logo" class="brand-logo">
-      </div>
-
-      <div class="center">
-        <div class="site-title">ACCESS TECH. SUPPORT</div>
-        <div class="site-tag">Fast • Reliable • Right Where You Are</div>
-      </div>
-
-      <div class="right">
-        <a href="https://wa.me/233599966149" class="cta whatsapp" target="_blank" rel="noopener">Chat on WhatsApp</a>
-      </div>
-    </div>
+  <header>
+    <img src="./AccessTech-BrandAssets/logo/access-tech-logo-dark.png" alt="AccessTech Logo" class="logo">
+    <h1>AccessTech Support</h1>
   </header>
 
-  <!-- MAIN: hero and inline cards -->
   <main>
     <section class="hero">
-      <div class="hero-inner">
-        <h1>Reliable Mobile Gadget Repair in Lashibi</h1>
-        <p>Same-day service for phones, tablets and laptops. Quick diagnostics — quality parts — professional service.</p>
-        <div class="hero-actions">
-          <a class="cta primary" href="https://wa.me/233599966149" target="_blank" rel="noopener">Chat on WhatsApp</a>
-          <a class="cta secondary" href="https://forms.gle/rqpZs81YGJBED5ZS8" target="_blank" rel="noopener">Open Booking Form</a>
-        </div>
-      </div>
+      <h2>Reliable Tech Help, Anytime.</h2>
+      <p>Your trusted partner for diagnostics, maintenance, and digital solutions.</p>
+      <a href="https://wa.me/233599966149" target="_blank" class="btn-primary">Book Support via WhatsApp</a>
     </section>
 
-    <section class="cards">
-      <article class="card">
-        <h2>Screen & Display</h2>
-        <p>Cracked screens and digitizer replacement for most brands.</p>
-      </article>
-
-      <article class="card">
-        <h2>Battery & Power</h2>
-        <p>Battery replacement, charging port repairs and power diagnostics.</p>
-      </article>
-
-      <article class="card">
-        <h2>Software & Diagnostics</h2>
-        <p>System troubleshooting, updates, malware removal and performance tune-ups.</p>
-      </article>
-    </section>
-
-    <section class="booking-cta">
-      <h2>Book a Repair</h2>
-      <p>Use the booking form for detailed issues or to upload photos. We reply on WhatsApp within 15 minutes.</p>
-      <div class="booking-actions">
-        <a class="cta primary" href="https://forms.gle/rqpZs81YGJBED5ZS8" target="_blank" rel="noopener">Book Repair Form</a>
-        <a class="cta whatsapp" href="https://wa.me/233599966149" target="_blank" rel="noopener">Chat on WhatsApp</a>
-      </div>
+    <section class="booking">
+      <h2>Detailed Booking</h2>
+      <p>Tell us your device issue, preferred time, or location. We’ll reach out promptly.</p>
+      <a href="https://wa.me/233599966149" target="_blank" class="btn-secondary">Start Booking</a>
     </section>
   </main>
 
-  <!-- SINGLE CONSOLIDATED FOOTER with one QR -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-left">
-        <p>📍 Lashibi • ☎ +233 599 966 149 • ✉ accesstechservicegh@gmail.com</p>
-      </div>
-
-      <div class="footer-center">
-        <p>© <span id="year"></span> ACCESS TECH. SUPPORT</p>
-      </div>
-
-      <div class="footer-right">
-        <!-- single QR image (adjust path if different) -->
-        <a href="https://wa.me/233599966149" target="_blank" rel="noopener">
-          <img src="AccessTech-BrandAssets/qr-codes/qr-set.png" alt="Scan to chat on WhatsApp" class="footer-qr">
-        </a>
-      </div>
+  <footer>
+    <div class="footer-content">
+      <img src="./AccessTech-BrandAssets/qr-codes/qr-single.png" alt="AccessTech QR" class="qr">
+      <p>Scan to connect instantly.</p>
+      <p>© 2025 AccessTech Support — All rights reserved.</p>
     </div>
   </footer>
 
-  <script>
-    // simple year update
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
